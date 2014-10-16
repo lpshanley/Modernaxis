@@ -24,7 +24,9 @@ function checkTime(i) {
 
 function bzConnect() {
   host = new ActiveXObject( "BZWhll.WhllObj" );
-  bzConnected = host.Connect( "A" );
+  //------- Session ID Here ----------------
+  bzConnected = host.Connect( "C" );
+  //----------------------------------------
   if ( bzConnected != 0 )
     alert("Error check your session id in the function");
 }
