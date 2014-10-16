@@ -32,3 +32,16 @@ function bzConnect() {
 function sendKey() {
   host.SendKey ("TEST")
 }
+
+function writeScreen() {
+    writeBuffer = "TEST"
+		host.WriteScreen (writeBuffer, 16, 43);
+		host.Focus();
+}
+
+function readScreen() {
+    var readBuffer = new Object();
+		host.ReadScreen (readBuffer, 5, 1, 39);
+		alert( "The contents of readBuffer = " + readBuffer.Str );
+		host.Focus();
+}
