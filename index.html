@@ -12,7 +12,7 @@
 <script src="sitescripts/FUNCTIONS.js"></script>
 
 </head>
-<body onload="startTime()">
+<body onload="pageLoad()">
 <div id="wrapper">
 
 <!-- Top Navigation Layout -->
@@ -23,12 +23,12 @@
     
     <div id="top_menu">
     	<ul>
-        	<li>File
-            	<ul>
-                <li>Exit</li>
+        	<li>File</li>            	
+          <li>Options
+            <ul>
+                <li><a onclick="sendKey()" href="#">Send Key Test...</a></li>
                 </ul>
             </li>
-            <li>Options</li>
         </ul>
     </div>
 
