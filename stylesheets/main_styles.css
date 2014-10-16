@@ -118,6 +118,15 @@ text-align: left;
 	min-height: calc(100% - 47px) !important;
 }
 
+#content_wrapper {
+  padding: 10px; 
+  font-size: 14px;
+}
+
+#content_wrapper h1 {
+  font-size: 20px;
+}
+
 /* ---------------------------- Bottom Status Bar ----------------------------- */
 #status_bar {
 	clear: both;
