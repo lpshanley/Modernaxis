@@ -1,0 +1,144 @@
+/*   
+** This document is property of the Mondernaxis Project.
+**
+** Copyright 2014 - Lucas Shanley
+**
+** Please respect the authors who devoted the time to this project. Any usage of this document without
+** express written permission is strictly forbidden as protected by law. If you would like to use any
+** of the code here in please contact the Modernaxis Development Team.
+*/ 
+
+/* ---------------------------- Standardization ------------------------------- */
+#body, html {
+	height: 100%;	
+}
+
+#wrapper {
+    width:100%;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+}
+
+/* ---------------------------- Top Navigation Bar ---------------------------- */
+#top_nav {
+	background-color: #E4E4E4;
+	width: 100%;
+	height: 25px;
+	clear: both;
+	border-bottom: thin;
+	border-bottom-color: #666;
+	border-bottom-style: outset;
+	
+}
+
+#top_title {
+	font-size: 25px;
+	font-weight: bold;
+	padding: 0px 10px 0px 0px;	
+	float: right;
+}
+
+#top_menu {
+		
+}
+
+#top_menu ul {
+text-align: left;
+  display: inline;
+  margin: 0;
+  list-style: none;
+}
+
+#top_menu ul li {
+  text-align: left;
+  margin: 0;
+  padding: 5px 5px 4px 5px;
+  list-style: none;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+}
+
+#top_menu ul li:hover {
+  background: #C47D13;
+  color: #fff;
+}
+
+#top_menu ul li ul {
+	padding: 0;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	width: 140px;
+	display: none;
+	opacity: 0;
+ 	visibility: hidden;
+	z-index: 999;
+}
+
+#top_menu ul li ul li { 
+  background: #C5C5C5; 
+  display: block; 
+  color: #000;
+}
+
+#top_menu ul li ul li:hover { 
+	background: #C47D13; 
+}
+
+#top_menu ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------------------------- Left Navigate Bar ----------------------------- */
+#left_nav {
+	background-color: #E4E4E4;
+	width: 150px;
+	height: calc(100% - 47px);
+	float: left;
+	position: absolute;
+	height: auto;
+	min-height: calc(100% - 47px) !important;
+	border-right: thin;
+	border-right-color: #666;
+	border-right-style: outset;
+}
+
+/* ---------------------------- Main Site Contents ---------------------------- */
+#main_content {
+	float: right;
+	background-color: #CCC;
+	width: calc(100% - 151px)
+	position: absolute;
+	height: auto;
+	min-height: calc(100% - 47px) !important;
+}
+
+/* ---------------------------- Bottom Status Bar ----------------------------- */
+#status_bar {
+	clear: both;
+	width: 100%;
+	height: 20px;
+	background-color: #bbb;
+	border-top: thin;
+	border-top-color: #666;
+	border-top-style: outset;
+}
+
+#bottom_clock {
+	margin-right: 15px;
+	height: inherit;
+	font-size: 19px;
+	width: 70px;
+	border-left: medium;
+	border-left-style: solid;
+	border-left-color: #666;
+	border-right: medium;
+	border-right-color: #666;
+	border-right-style: solid;
+	float: right;
+	background-color: #E4E4E4;
+}
