@@ -1,3 +1,8 @@
+function pageLoad() {
+  startTime();
+  bzConnect();
+}
+
 function startTime() {
     var today=new Date();
     var h=today.getHours();
@@ -13,6 +18,17 @@ function startTime() {
 }
 
 function checkTime(i) {
-    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i<10) {i = "0" + i};
     return i;
+}
+
+function bzConnect() {
+  host = new ActiveXObject( "BZWhll.WhllObj" );
+  bzConnected = host.Connect( "A" );
+  if ( bzConnected != 0 )
+    alert("Error check your session id in the function");
+}
+
+function sendKey() {
+  host.SendKey ("TEST")
 }
