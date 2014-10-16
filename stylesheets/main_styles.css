@@ -110,9 +110,10 @@ text-align: left;
 /* ---------------------------- Main Site Contents ---------------------------- */
 #main_content {
 	float: right;
-	background-color: #CCC;
-	width: calc(100% - 151px)
-	position: absolute;
+  clear: left;
+	background-color: #fff;
+	width: calc(100% - 151px);
+	position: relative;
 	height: auto;
 	min-height: calc(100% - 47px) !important;
 }
