@@ -48,7 +48,7 @@ function bzConnect() {
 	
   host = new ActiveXObject( "BZWhll.WhllObj" );
   //------- Session ID Here ----------------
-  bzConnected = host.Connect( "C" );
+  bzConnected = host.Connect( "A" );
   //----------------------------------------
   if ( bzConnected != 0 ) {
     alert("Error check your session id in the function");
