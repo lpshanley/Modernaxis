@@ -65,10 +65,7 @@
     5. If you are getting connection errors you must check your session ID and verify that it's the same as<br>
     &nbsp;&nbsp;&nbsp;&nbsp;the ID in Bluezone. &nbsp;&nbsp;&nbsp;( Options -> API... -> Short Name Session Identifier &lt; ex. a, b, c, d... &gt; )<br>
     <br>
-    <br>
     Note: To change the session ID navigate to sitescripts/FUNCTIONS.js and go to the function bzConnect(). Change the session ID to match your open session ID.
-    <br>
-    <br>
     <br>
     SAMPLE WriteScreen Form:
     <br>
@@ -77,6 +74,13 @@
     Row: &nbsp;<input type="text" id="row_field" /><br>
     Col: &nbsp;&nbsp;&nbsp;<input type="text" id="col_field" /><br><br>
     <input type="submit" value="WriteScreen"/>
+    </form>
+    <br>
+    SAMPLE SendKey Form:
+    <br>
+    <form id="sendkeyform" action="#" method="post" onsubmit="return keysendtest();">
+    Key to Send: &nbsp;&nbsp;&nbsp;<input type="text" id="key_field" /><br><br>
+    <input type="submit" value="SendKey"/>
     </form>
   </div>
 </div>
