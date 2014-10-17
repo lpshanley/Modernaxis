@@ -9,7 +9,12 @@
 
 <link type="text/css" rel="stylesheet" href="stylesheets/main_styles.css" />
 
+<!-- JQuery 1.11.1 -->
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<!-- Site Functions and Operators -->
 <script src="sitescripts/FUNCTIONS.js"></script>
+
 
 </head>
 <body onload="pageLoad()">
@@ -17,18 +22,23 @@
 
 <!-- Top Navigation Layout -->
 <div id="top_nav">
-	<div id="top_title">
+	<div id="top_title" class="inset-text">
     	Modernaxis
     </div>
     
     <div id="top_menu">
     	<ul>
-        	<li>File</li>            	
+          <li>File
+            <ul>
+              <li><a onclick="exitProgram();" href="#">Exit</a></li>
+            </ul>          
+          </li>            	
           <li>Options
             <ul>
-                <li><a onclick="sendKey()" href="#">Send Key Test...</a></li>
-                <li><a onclick="readScreen()" href="#">Read Screen Test...</a></li>
-                <li><a onclick="writeScreen()" href="#">Write Screen Test...</a></li>
+                <li><a onclick="sendKey(); return false;" href="#">SendKey...</a></li>
+                <li><a onclick="readScreen(); return false;" href="#">ReadScreen...</a></li>
+                <li><a onclick="writeScreen(); return false;" href="#">WriteScreen...</a></li>
+                <li><a onclick="testFunction();" href="#">Test Function</a></li>
                 </ul>
             </li>
         </ul>
@@ -57,14 +67,16 @@
     <br>
     <br>
     Note: To change the session ID navigate to sitescripts/FUNCTIONS.js and go to the function bzConnect(). Change the session ID to match your open session ID.
+    <br>
+    <br>
+    <br>
   </div>
 </div>
 
 <!-- Bottom Status Bar -->
 <div id="status_bar">
-	<div id="bottom_clock">
-    
-    </div>
+    <div id="bottom_clock"></div>
+    <div id="connection_status"></div>
 
 </div>
 

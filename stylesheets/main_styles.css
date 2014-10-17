@@ -8,6 +8,16 @@
 ** of the code here in please contact the Modernaxis Development Team.
 */ 
 
+/* ---------------------------- Style Classes --------------------------------- */
+
+.inset-text {
+    font-family: Lucida Grande;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+
 /* ---------------------------- Standardization ------------------------------- */
 #body, html {
 	height: 100%;	
@@ -44,32 +54,40 @@
 }
 
 #top_menu ul {
-text-align: left;
-  display: inline;
-  margin: 0;
-  list-style: none;
+    text-align: left;
+    display: inline;
+    margin: 0;
+    list-style: none;
 }
 
 #top_menu ul li {
-  text-align: left;
-  margin: 0;
-  padding: 5px 5px 4px 5px;
-  list-style: none;
-  display: inline-block;
-  margin-right: -4px;
-  position: relative;
+    text-align: left;
+    margin: 0;
+    padding: 5px 10px 4px 10px;
+    list-style: none;
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    border-left: medium;
+    border-left-style: solid;
+    border-left-color: #666;
+}
+
+#top_menu ul li a {
+    text-decoration: none;
+    color: #fff;
 }
 
 #top_menu ul li:hover {
-  background: #C47D13;
-  color: #fff;
+    background: #C47D13;
+    color: #fff;
 }
 
 #top_menu ul li ul {
 	padding: 0;
 	position: absolute;
 	top: 25px;
-	left: 0;
+	left: -3px;
 	width: 140px;
 	display: none;
 	opacity: 0;
@@ -78,9 +96,20 @@ text-align: left;
 }
 
 #top_menu ul li ul li { 
-  background: #C5C5C5; 
-  display: block; 
-  color: #000;
+    background: #BBB; 
+    display: block; 
+    color: #000;
+    border-bottom: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #0;
+    border-right: thin;
+    border-right-style: solid;
+    border-right-color: #0;
+}
+
+#top_menu ul li ul li a {
+    text-decoration: none;
+    color: #fff;
 }
 
 #top_menu ul li ul li:hover { 
@@ -88,9 +117,9 @@ text-align: left;
 }
 
 #top_menu ul li:hover ul {
-  display: block;
-  opacity: 1;
-  visibility: visible;
+    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ---------------------------- Left Navigate Bar ----------------------------- */
@@ -110,7 +139,7 @@ text-align: left;
 /* ---------------------------- Main Site Contents ---------------------------- */
 #main_content {
 	float: right;
-  clear: left;
+    clear: left;
 	background-color: #fff;
 	width: calc(100% - 151px);
 	position: relative;
@@ -119,12 +148,12 @@ text-align: left;
 }
 
 #content_wrapper {
-  padding: 10px; 
-  font-size: 14px;
+    padding: 10px; 
+    font-size: 14px;
 }
 
 #content_wrapper h1 {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 /* ---------------------------- Bottom Status Bar ----------------------------- */
@@ -139,10 +168,10 @@ text-align: left;
 }
 
 #bottom_clock {
-	margin-right: 15px;
-	height: inherit;
-	font-size: 19px;
-	width: 70px;
+	margin-right: 5px;
+	height: 16px;
+	font-size: 14px;
+	width: 55px;
 	border-left: medium;
 	border-left-style: solid;
 	border-left-color: #666;
@@ -151,4 +180,23 @@ text-align: left;
 	border-right-style: solid;
 	float: right;
 	background-color: #E4E4E4;
+	padding-top: 4px;
+	padding-left: 4px;
+}
+
+#connection_status {
+	margin-right: 5px;
+	height: 16px;
+	font-size: 14px;
+	width: 110px;
+	border-left: medium;
+	border-left-style: solid;
+	border-left-color: #666;
+	border-right: medium;
+	border-right-color: #666;
+	border-right-style: solid;
+	float: right;
+	background-color: #E4E4E4;
+	padding-top: 4px;
+	padding-left: 4px;
 }
