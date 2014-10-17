@@ -129,7 +129,6 @@
 	height: calc(100% - 47px);
 	float: left;
 	position: absolute;
-	height: auto;
 	min-height: calc(100% - 47px) !important;
 	border-right: thin;
 	border-right-color: #666;
@@ -143,7 +142,7 @@
 	background-color: #fff;
 	width: calc(100% - 151px);
 	position: relative;
-	height: auto;
+  height: calc(100% - 47px);
 	min-height: calc(100% - 47px) !important;
 }
 
@@ -158,8 +157,8 @@
 
 /* ---------------------------- Bottom Status Bar ----------------------------- */
 #status_bar {
-	position: absolute;
-	bottom: 0;
+  position: absolute;
+  bottom: 0;
 	clear: both;
 	width: 100%;
 	height: 20px;
