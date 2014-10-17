@@ -35,9 +35,9 @@
           </li>            	
           <li>Options
             <ul>
-                <li><a onclick="sendKey(); return false;" href="#">SendKey...</a></li>
-                <li><a onclick="readScreen(); return false;" href="#">ReadScreen...</a></li>
-                <li><a onclick="writeScreen(); return false;" href="#">WriteScreen...</a></li>
+                <li><a onclick="sendKeyTest(); return false;" href="#">SendKey...</a></li>
+                <li><a onclick="readScreenTest(); return false;" href="#">ReadScreen...</a></li>
+                <li><a onclick="writeScreenTest(); return false;" href="#">WriteScreen...</a></li>
                 <li><a onclick="testFunction();" href="#">Test Function</a></li>
                 </ul>
             </li>
@@ -70,6 +70,14 @@
     <br>
     <br>
     <br>
+    SAMPLE WriteScreen Form:
+    <br>
+    <form id="testform" action="#" method="post" onsubmit="return runme();">
+    Text: &nbsp;<input type="text" id="text_field" /><br>
+    Row: &nbsp;<input type="text" id="row_field" /><br>
+    Col: &nbsp;&nbsp;&nbsp;<input type="text" id="col_field" /><br><br>
+    <input type="submit" value="WriteScreen"/>
+    </form>
   </div>
 </div>
 

@@ -5,8 +5,18 @@ function pageLoad() {
   bzConnect();
 }
 
+//------------ Testing Area ------------------
+
 function testFunction() {
    alert("Test function region");
+}
+
+function runme() {
+	var var_text = document.forms["testform"]["text_field"].value;
+	var row_text = document.forms["testform"]["row_field"].value;
+	var col_text = document.forms["testform"]["col_field"].value;
+	writeScreen(var_text,row_text,col_text);
+	return false;
 }
 
 //--------- Clock -----------------------------
@@ -57,21 +67,21 @@ function content_swap() {
 
 //------- Test Functions -----------------------------
 
-function sendKey() {
+function sendKeyTest() {
   host.SendKey ("TEST");
 }
 
-function writeScreen() {
+function writeScreenTest() {
     writeBuffer = "TEST"
 	host.WriteScreen (writeBuffer, 16, 43);
 	host.Focus();
 }
 
-function readScreen() {
+function readScreenTest() {
     var readBuffer = new Object();
-		host.ReadScreen (readBuffer, 5, 1, 39);
-		alert( "The contents of readBuffer = " + readBuffer.Str );
-		host.Focus();
+	host.ReadScreen (readBuffer, 5, 1, 39);
+	alert( "The contents of readBuffer = " + readBuffer.Str );
+	host.Focus();
 }
 
 //---------- Misc Functions -------------------------
@@ -82,25 +92,25 @@ function exitProgram() {
 
 //---------- Converted Object Methods ---------------
 
-//function writeScreen(text,row,col) {
-//	host.WriteScreen (text, row, col);
-//	host.Focus();
-//}
+function writeScreen(text,row,col) {
+	host.WriteScreen (text, row, col);
+	host.Focus();
+}
 
-//function readScreen(var_name,len,row,col) {
-//    var var_name = new Object();
-//    host.ReadScreen (nar_name, len, row, col);
-//	  host.Focus();
-//}
+function readScreen(var_name,len,row,col) {
+    var var_name = new Object();
+    host.ReadScreen (nar_name, len, row, col);
+	host.Focus();
+}
 
-//function sendKey(X) {
-//  host.SendKey(X);
-//  host.WaitReady(0,0);
-//}
+function sendKey(X) {
+  host.SendKey(X);
+  host.WaitReady(0,0);
+}
 
-//function waitReady(X,Y) {
-//  host.waitReady(X,Y);
-//}
+function waitReady(X,Y) {
+  host.waitReady(X,Y);
+}
 
 function setCursor(row,col) {
     Host.SetCursor(row, col);	
