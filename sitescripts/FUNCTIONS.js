@@ -19,6 +19,12 @@ function runme() {
 	return false;
 }
 
+function keysendtest() {
+  var X = document.forms["sendkeyform"]["key_field"].value;
+  host.sendKey(X);
+	return false;
+}
+
 //--------- Clock -----------------------------
 
 function startTime() {
