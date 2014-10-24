@@ -7,11 +7,16 @@ function pageLoad() {
 
 //------------ Testing Area ------------------
 
+function alert_test() {
+	alert("WORKING!");	
+}
+
+
           //------- Test Data---
           
-var case_number = 211486;
-var footer_month = 10;
-var footer_year = 14;
+//var case_number = 211486;
+//var footer_month = 10;
+//var footer_year = 14;
 
           //--------------------
 
@@ -74,10 +79,10 @@ function bzConnect() {
   
 }
 
-//------- Content Region Swap ------------------------
+//------- Page Loader -------------------------------
 
-function content_swap() {
-
+function load_page(newPage) {
+	document.getElementById('page_contents').src = newPage;
 }
 
 //------- Test Functions -----------------------------

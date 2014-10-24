@@ -13,8 +13,7 @@
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
 <!-- Site Functions and Operators -->
-<script src="sitescripts/FUNCTIONS.js"></script>
-
+<script src="js/SITE_FUNCTIONS.js"></script>
 
 </head>
 <body onload="pageLoad()">
@@ -30,14 +29,20 @@
     	<ul>
           <li>File
             <ul>
+              <li><a onclick="load_page(this.href); return false;" href="web_pages/home_page.html">Home</a></li>
               <li><a onclick="exitProgram();" href="#">Exit</a></li>
             </ul>          
+          </li>
+          <li>Sample Web Forms
+          	<ul>
+          		<li><a onclick="load_page(this.href); return false;" href="web_pages/write_screen_test.html">Write Screen Form</a></li>
+          		<li><a onclick="load_page(this.href); return false;" href="web_pages/send_key_test.html">Send Key Form</a></li>
+          	</ul>
           </li>            	
           <li>Options
             <ul>
-                <li><a onclick="sendKeyTest(); return false;" href="#">SendKey...</a></li>
-                <li><a onclick="readScreenTest(); return false;" href="#">ReadScreen...</a></li>
-                <li><a onclick="writeScreenTest(); return false;" href="#">WriteScreen...</a></li>
+            	<li><a onclick="load_page(this.href); return false;" href="web_pages/case_navigation_test.html">Case Navigation</a></li>
+                <li><a onclick="load_page(this.href); return false;" href="web_pages/test_page.html">Test Page</a></li>
                 <li><a onclick="testFunction();" href="#">Test Function</a></li>
                 </ul>
             </li>
@@ -55,34 +60,10 @@
 
 <!-- Main Page Content -->
 <div id="main_content">
-  <div id="content_wrapper">
-    <h1>Instructions</h1>
-    <br>
-    1. You must currently run this in IE.<br>
-    2. On loading you must allow ActiveX controls. (Allow blocked content)<br>
-    3. You may run some basic test functions that are listed in the Options drop down.<br>
-    4. The test functions are designed to be used on the MAXIS/SELF Menu.<br>
-    5. If you are getting connection errors you must check your session ID and verify that it's the same as<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;the ID in Bluezone. &nbsp;&nbsp;&nbsp;( Options -> API... -> Short Name Session Identifier &lt; ex. a, b, c, d... &gt; )<br>
-    <br>
-    Note: To change the session ID navigate to sitescripts/FUNCTIONS.js and go to the function bzConnect(). Change the session ID to match your open session ID.
-    <br>
-    SAMPLE WriteScreen Form:
-    <br>
-    <form id="testform" action="#" method="post" onsubmit="return runme();">
-    Text: &nbsp;<input type="text" id="text_field" /><br>
-    Row: &nbsp;<input type="text" id="row_field" /><br>
-    Col: &nbsp;&nbsp;&nbsp;<input type="text" id="col_field" /><br><br>
-    <input type="submit" value="WriteScreen"/>
-    </form>
-    <br>
-    SAMPLE SendKey Form:
-    <br>
-    <form id="sendkeyform" action="#" method="post" onsubmit="return keysendtest();">
-    Key to Send: &nbsp;&nbsp;&nbsp;<input type="text" id="key_field" /><br><br>
-    <input type="submit" value="SendKey"/>
-    </form>
-  </div>
+<div id="content_wrapper">
+
+</div>
+  	<iframe id="page_contents" width = "100%" height="100%" frameborder="0" src="web_pages/home_page.html"></iframe>
 </div>
 
 <!-- Bottom Status Bar -->
