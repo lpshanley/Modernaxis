@@ -31,6 +31,7 @@
 }
 
 /* ---------------------------- Top Navigation Bar ---------------------------- */
+
 #top_nav {
 	background-color: #E4E4E4;
 	width: 100%;
@@ -39,7 +40,6 @@
 	border-bottom: thin;
 	border-bottom-color: #666;
 	border-bottom-style: outset;
-	
 }
 
 #top_title {
@@ -49,87 +49,125 @@
 	float: right;
 }
 
-#top_menu {
-		
-}
-
-#top_menu ul {
-    text-align: left;
-    display: inline;
-    margin: 0;
-    list-style: none;
-}
-
-#top_menu ul li {
-    text-align: left;
-    margin: 0;
-    padding: 5px 10px 4px 10px;
-    list-style: none;
-    display: inline-block;
-    margin-right: -4px;
-    position: relative;
-    border-left: medium;
-    border-left-style: solid;
-    border-left-color: #666;
-}
-
-#top_menu ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-#top_menu ul li:hover {
-    background: #C47D13;
-    color: #fff;
-}
-
-#top_menu ul li ul {
+.nav {
+	position: relative;
+	margin: 0;
 	padding: 0;
+	line-height: 22px;
+	z-index:999;
+}
+
+.nav>li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	z-index:999;
+}
+
+.nav>li>a {
+	display: block;
+	position: relative;
+	padding: 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+	background: rgba(0, 0, 0, .4);
+	-ms-transition: color .3s ease-in;
+	z-index:999;
+}
+
+.nav>li>a:hover, .nav>li:hover>a {
+	color: #0fd0f9;
+	z-index:999;
+}
+
+.nav>.dropdown>a {
+	padding: 2px 15px;
+	z-index:999;
+}
+
+.dropdown>a:hover::after, .dropdown:hover>a::after {
+	border-color: #0fd0f9;
+	z-index:999;
+}
+
+.nav ul {
 	position: absolute;
-	top: 25px;
-	left: -3px;
-	width: 180px;
-	display: none;
-	opacity: 0;
- 	visibility: hidden;
-	z-index: 999;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	z-index:999;
 }
 
-#top_menu ul li ul li { 
-    background: #BBB; 
-    display: block; 
-    color: #000;
-    border-bottom: thin;
-    border-bottom-style: solid;
-    border-bottom-color: #0;
-    border-right: thin;
-    border-right-style: solid;
-    border-right-color: #0;
+.nav ul li {
+	position: absolute;
+	top: -9999px;
+	height: 0px;
+	display: block;
+	margin: 0;
+	padding: 0;
+	-ms-transition: height .2s ease-in;
+	z-index:999;
 }
 
-#top_menu ul li ul li a {
-    text-decoration: none;
-    color: #fff;
+.dropdown:hover>ul>li {
+	height: 30px;
+	position: relative;
+	top: auto;
+	/**/
+	z-index:999;
 }
 
-#top_menu ul li ul li:hover { 
-	background: #C47D13; 
+.nav ul li a {
+	padding: 4px 10px;
+	width: 140px;
+	display: block;
+	position: relative;
+	color: #bbb;
+	text-decoration: none;
+	font-size: 14px;
+	background: rgba(0, 0, 0, .8);
+	-ms-transition: color .3s ease-in, background .3s ease-in;
+	z-index:999;
 }
 
-#top_menu ul li:hover ul {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+.nav ul li:hover>a, .nav ul li a:hover {
+	color: #0fd0f9;
+	background: rgba(0, 0, 0, .75);
+	z-index:999;
+}
+
+.nav ul .dropdown:hover ul {
+	left: 160px;
+	top: 0px;
+	z-index:999;
+}
+
+.nav ul .dropdown a::after {
+	width: 6px;
+	height: 6px;
+	border-bottom: 0;
+	border-right: 1px solid #fff;
+	border-top: 1px solid #fff;
+	top: 12px;
+	z-index:999;
+}
+
+.nav ul .dropdown:hover>a::after, .nav ul .dropdown>a:hover::after {
+	border-right: 1px solid #0fd0f9;
+	border-top: 1px solid #0fd0f9;
+	z-index:999;
 }
 
 /* ---------------------------- Left Navigate Bar ----------------------------- */
 #left_nav {
 	background-color: #E4E4E4;
 	width: 150px;
-	height: calc(100% - 47px);
+	height: calc(100% - 26px);
 	float: left;
 	position: absolute;
-	min-height: calc(100% - 47px) !important;
 	border-right: thin;
 	border-right-color: #666;
 	border-right-style: outset;
@@ -142,23 +180,28 @@
 	background-color: #fff;
 	width: calc(100% - 151px);
 	position: relative;
-    height: calc(100% - 47px);
-	min-height: calc(100% - 47px) !important;
+    height: calc(100% - 26px);
+	overflow: scroll;
+	overflow-y: hidden;
+	font-size: 14px;
+}
+
+#main_content h1 {
+    font-size: 35px;
 }
 
 #content_wrapper {
-    padding: 10px; 
-    font-size: 14px;
+	padding: 10px 0px 0px 10px;
 }
 
 #content_wrapper h1 {
-    font-size: 35px;
+    
 }
 
 /* ---------------------------- Bottom Status Bar ----------------------------- */
 #status_bar {
-  position: absolute;
-  bottom: 0;
+	position: absolute;
+	bottom: 0;
 	clear: both;
 	width: 100%;
 	height: 20px;

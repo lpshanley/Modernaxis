@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template 1.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- InstanceBeginEditable name="doctitle" -->
+<!-- TemplateBeginEditable name="doctitle" -->
 <title>Modernaxis</title>
-<!-- InstanceEndEditable -->
+<!-- TemplateEndEditable -->
 <!-- Eric Meyers Full CSS reset (Public Domain) -->
 <link type="text/css" rel="stylesheet" href="../stylesheets/css_reset.css" />
 
@@ -15,20 +15,8 @@
 
 <!-- Site Functions and Operators -->
 <script src="../js/SITE_FUNCTIONS.js"></script>
-<!-- InstanceBeginEditable name="head" -->
-
-<!-- Eric Meyers Full CSS reset (Public Domain) -->
-<link type="text/css" rel="stylesheet" href="stylesheets/css_reset.css" />
-
-<link type="text/css" rel="stylesheet" href="stylesheets/main_styles.css" />
-
-<!-- JQuery 1.11.1 -->
-<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-
-<!-- Site Functions and Operators -->
-<script src="js/SITE_FUNCTIONS.js"></script>
-
-<!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 </head>
 <body onload="pageLoad()">
 <div id="wrapper">
@@ -81,18 +69,11 @@
 <!-- Main Page Content -->
 <div id="main_content">
 
-<!-- InstanceBeginEditable name="Page Body" -->
-  
-<div id="content_wrapper">
-            
-    <h1>This is a test page to demonstrate web form usage!</h1>
-    <br />
-    <br />
-    <input type="button" value="Test function!" onclick="alert_test(); return false;" />
-    
-</div>
-            
-            <!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="Page Body" -->
+
+
+
+<!-- TemplateEndEditable -->
 
 <br />
 <br />
@@ -107,4 +88,4 @@
 
 </div>
 </body>
-<!-- InstanceEnd --></html>
+</html>

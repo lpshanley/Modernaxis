@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Modernaxis</title>
+
+<!-- Eric Meyers Full CSS reset (Public Domain) -->
+<link type="text/css" rel="stylesheet" href="stylesheets/css_reset.css" />
+
+<link type="text/css" rel="stylesheet" href="stylesheets/main_styles.css" />
+
+<!-- JQuery 1.11.1 -->
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<!-- Site Functions and Operators -->
+<script src="js/SITE_FUNCTIONS.js"></script>
+
+</head>
+<body onload="pageLoad()">
+<div id="wrapper">
+
+<!-- Top Navigation Layout -->
+<div id="top_nav">
+	<div id="top_title" class="inset-text">
+    	Modernaxis
+    </div>
+    
+    <div id="top_menu">
+    	<ul>
+          <li>File
+            <ul>
+              <li><a onclick="load_page(this.href); return false;" href="web_pages/home_page.html">Home</a></li>
+              <li><a onclick="exitProgram();" href="#">Exit</a></li>
+            </ul>          
+          </li>
+          <li>Sample Web Forms
+          	<ul>
+          		<li><a onclick="load_page(this.href); return false;" href="web_pages/write_screen_test.html">Write Screen Form</a></li>
+          		<li><a onclick="load_page(this.href); return false;" href="web_pages/send_key_test.html">Send Key Form</a></li>
+          	</ul>
+          </li>            	
+          <li>Options
+            <ul>
+            	<li><a onclick="load_page(this.href); return false;" href="web_pages/case_navigation_test.html">Case Navigation</a></li>
+                <li><a onclick="load_page(this.href); return false;" href="web_pages/test_page.html">Test Page</a></li>
+                <li><a onclick="testFunction();" href="#">Test Function</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+<!-- Left Menu Bar -->
+<div id="left_nav">
+
+</div>
+
+
+<!-- Main Page Content -->
+<div id="main_content">
+<div id="content_wrapper">
+
+</div>
+  	<iframe id="page_contents" width = "100%" height="100%" frameborder="0" src="web_pages/home_page.html"></iframe>
+</div>
+
+<!-- Bottom Status Bar -->
+<div id="status_bar">
+    <div id="bottom_clock"></div>
+    <div id="connection_status"></div>
+
+</div>
+
+</div>
+</body>
+</html>

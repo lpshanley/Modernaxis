@@ -1,18 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template 1.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Modernaxis</title>
+<!-- InstanceEndEditable -->
 <!-- Eric Meyers Full CSS reset (Public Domain) -->
 <link type="text/css" rel="stylesheet" href="../stylesheets/css_reset.css" />
+
 <link type="text/css" rel="stylesheet" href="../stylesheets/main_styles.css" />
+
 <!-- JQuery 1.11.1 -->
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
 <!-- Site Functions and Operators -->
 <script src="../js/SITE_FUNCTIONS.js"></script>
-</head>
+<!-- InstanceBeginEditable name="head" -->
 
-<h1>Write Screen Test</h1>
-<br>
-<form id="testform" action="#" method="post" onsubmit="return runme();">
-Text: &nbsp;<input type="text" id="text_field" /><br>
-Row: &nbsp;<input type="text" id="row_field" /><br>
-Col: &nbsp;&nbsp;&nbsp;<input type="text" id="col_field" /><br><br>
-<input type="submit" value="WriteScreen"/>
-</form>
+<!-- Eric Meyers Full CSS reset (Public Domain) -->
+<link type="text/css" rel="stylesheet" href="stylesheets/css_reset.css" />
+
+<link type="text/css" rel="stylesheet" href="stylesheets/main_styles.css" />
+
+<!-- JQuery 1.11.1 -->
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<!-- Site Functions and Operators -->
+<script src="js/SITE_FUNCTIONS.js"></script>
+
+<!-- InstanceEndEditable -->
+</head>
+<body onload="pageLoad()">
+<div id="wrapper">
+
+<!-- Top Navigation Layout -->
+<div id="top_nav">
+	<div id="top_title" class="inset-text">
+    	Modernaxis
+    </div>
+    
+<ul class="nav">
+    <li class="dropdown"><a href="#">File</a>
+    	<ul>
+        	<li><a href="../index.html">Home</a></li>
+            <li><a onclick="exitProgram();" href="#">Exit</a></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a href="#">Sample Web Forms</a>
+        <ul>
+            <li><a href="write_screen_test.html">Write Screen Form</a></li>
+            <li><a href="send_key_test.html">Read Screen Form</a></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a href="#">Options</a>
+    	<ul>
+        	<li class="dropdown"><a href="#">Navigation</a>
+            	<ul>
+                	<li><a href="#">Navigation 1</a></li>
+            		<li><a href="#">Navigation 2</a></li>
+                    <li><a href="#">Navigation 3</a></li>
+                </ul>
+            </li>
+            <li><a href="case_navigation_test.html">Case Navigation</a></li>
+            <li><a href="test_page.html">Test Page</a></li>
+            <li><a onclick="testFunction();" href="#">Test Function</a></li>        
+        </ul>
+    </li>
+</ul>
+
+</div>
+
+<!-- Left Menu Bar -->
+<div id="left_nav">
+
+
+
+</div>
+
+
+<!-- Main Page Content -->
+<div id="main_content">
+
+<!-- InstanceBeginEditable name="Page Body" -->
+
+<div id="content_wrapper">
+            
+    <h1>Write Screen Test</h1>
+    <br />
+    <form id="testform" action="#" method="post" onsubmit="return runme();">
+    Text: &nbsp;<input type="text" id="text_field" /><br />
+    Row: &nbsp;<input type="text" id="row_field" /><br />
+    Col: &nbsp;&nbsp;&nbsp;<input type="text" id="col_field" /><br /><br />
+    <input type="submit" value="WriteScreen"/>
+    </form>
+    
+</div>
+    
+            <!-- InstanceEndEditable -->
+
+<br />
+<br />
+</div>
+
+<!-- Bottom Status Bar -->
+<div id="status_bar">
+    <div id="bottom_clock"></div>
+    <div id="connection_status"></div>
+
+</div>
+
+</div>
+</body>
+<!-- InstanceEnd --></html>
