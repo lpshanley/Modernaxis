@@ -14,9 +14,9 @@ function alert_test() {
 
           //------- Test Data---
           
-//var case_number = 211486;
-//var footer_month = 10;
-//var footer_year = 14;
+var case_number = 211486;
+var footer_month = 10;
+var footer_year = 14;
 
           //--------------------
 
