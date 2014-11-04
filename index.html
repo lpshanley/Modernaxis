@@ -13,11 +13,11 @@
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
 <!-- Site Functions and Operators -->
-<script src="sitescripts/FUNCTIONS.js"></script>
-
+<script src="js/SITE_FUNCTIONS.js"></script>
+<script src="js/test_code.js"></script>
 
 </head>
-<body onload="pageLoad()">
+<body>
 <div id="wrapper">
 
 <!-- Top Navigation Layout -->
@@ -26,25 +26,37 @@
     	Modernaxis
     </div>
     
-    <div id="top_menu">
+<ul class="nav">
+    <li class="dropdown"><a href="#">File</a>
     	<ul>
-          <li>File
-            <ul>
-              <li><a onclick="exitProgram();" href="#">Exit</a></li>
-            </ul>          
-          </li>            	
-          <li>Options
-            <ul>
-                <li><a onclick="sendKeyTest(); return false;" href="#">SendKey...</a></li>
-                <li><a onclick="readScreenTest(); return false;" href="#">ReadScreen...</a></li>
-                <li><a onclick="writeScreenTest(); return false;" href="#">WriteScreen...</a></li>
-                <li><a onclick="testFunction();" href="#">Test Function</a></li>
+        	<li><a class="content_load" id="index" href="#">Home</a></li>
+            <li><a onclick="exitProgram();" href="#">Exit</a></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a href="#">Sample Web Forms</a>
+        <ul>
+            <li><a class="content_load" id="write_screen_test" href="#">Write Screen Form</a></li>
+            <li><a class="content_load" id="send_key_test" href="#">Send Key Form</a></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a href="#">Options</a>
+    	<ul>
+        	<li class="dropdown"><a href="#">Navigation</a>
+            	<ul>
+                	<li><a onclick="navigate_to_screen('STAT','MEMB');" href="#">STAT / MEMB</a></li>
+            		<li><a onclick="navigate_to_screen('STAT','JOBS');" href="#">STAT / JOBS</a></li>
+                    <li><a onclick="navigate_to_screen('CASE','CURR');" href="#">CASE / CURR</a></li>
+                    <li><a onclick="navigate_to_screen('CASE','NOTE');" href="#">CASE / NOTE</a></li>
+                    <li><a onclick="navigate_to_screen('ELIG','HC');" href="#">ELIG / HC</a></li>
                 </ul>
             </li>
+            <li><a class="content_load" id="case_navigation_test" href="#">Case Navigation</a></li>
+            <li><a class="content_load" id="test_page" href="#">Test Page</a></li>
+            <li><a class="content_load" id="demo_values" href="#">Demo Data Values</a></li>
         </ul>
-    </div>
-
-
+    </li>
+</ul>
+    
 </div>
 
 <!-- Left Menu Bar -->
@@ -52,43 +64,36 @@
 
 </div>
 
-
 <!-- Main Page Content -->
 <div id="main_content">
-  <div id="content_wrapper">
-    <h1>Instructions</h1>
-    <br>
-    1. You must currently run this in IE.<br>
-    2. On loading you must allow ActiveX controls. (Allow blocked content)<br>
-    3. You may run some basic test functions that are listed in the Options drop down.<br>
-    4. The test functions are designed to be used on the MAXIS/SELF Menu.<br>
-    5. If you are getting connection errors you must check your session ID and verify that it's the same as<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;the ID in Bluezone. &nbsp;&nbsp;&nbsp;( Options -> API... -> Short Name Session Identifier &lt; ex. a, b, c, d... &gt; )<br>
-    <br>
-    Note: To change the session ID navigate to sitescripts/FUNCTIONS.js and go to the function bzConnect(). Change the session ID to match your open session ID.
-    <br>
-    SAMPLE WriteScreen Form:
-    <br>
-    <form id="testform" action="#" method="post" onsubmit="return runme();">
-    Text: &nbsp;<input type="text" id="text_field" /><br>
-    Row: &nbsp;<input type="text" id="row_field" /><br>
-    Col: &nbsp;&nbsp;&nbsp;<input type="text" id="col_field" /><br><br>
-    <input type="submit" value="WriteScreen"/>
-    </form>
-    <br>
-    SAMPLE SendKey Form:
-    <br>
-    <form id="sendkeyform" action="#" method="post" onsubmit="return keysendtest();">
-    Key to Send: &nbsp;&nbsp;&nbsp;<input type="text" id="key_field" /><br><br>
-    <input type="submit" value="SendKey"/>
-    </form>
-  </div>
+
+<!-- Main Content Changes Start Here -->
+
+<div id="content_wrapper">
+
+<!-- Content From forms will ajax into this region! -->
+
+</div>
+
+<!-- No changes below this line -->
+
+<br />
+<br />
 </div>
 
 <!-- Bottom Status Bar -->
 <div id="status_bar">
-    <div id="bottom_clock"></div>
-    <div id="connection_status"></div>
+<div id="bottom_clock"></div>
+<div id="connection_status"></div>
+<div id="connection_method">
+<input class="connection_method_Button" type="button" value="Connect" id="" />
+<select name="session_id_short" class="connection_method_Selection" >
+	<option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select>
+</div>
 
 </div>
 

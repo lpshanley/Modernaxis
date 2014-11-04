@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template 1.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Modernaxis</title>
+<!-- InstanceEndEditable -->
+<!-- Eric Meyers Full CSS reset (Public Domain) -->
+<link type="text/css" rel="stylesheet" href="../stylesheets/css_reset.css" />
+
+<link type="text/css" rel="stylesheet" href="../stylesheets/main_styles.css" />
+
+<!-- JQuery 1.11.1 -->
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<!-- Site Functions and Operators -->
+<script src="../js/SITE_FUNCTIONS.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+
+<!-- Eric Meyers Full CSS reset (Public Domain) -->
+<link type="text/css" rel="stylesheet" href="stylesheets/css_reset.css" />
+
+<link type="text/css" rel="stylesheet" href="stylesheets/main_styles.css" />
+
+<!-- JQuery 1.11.1 -->
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<!-- Site Functions and Operators -->
+<script src="js/SITE_FUNCTIONS.js"></script>
+
+<!-- InstanceEndEditable -->
+</head>
+<body onload="pageLoad()">
+<div id="wrapper">
+
+<!-- Top Navigation Layout -->
+<div id="top_nav">
+	<div id="top_title" class="inset-text">
+    	Modernaxis
+    </div>
+    
+<ul class="nav">
+    <li class="dropdown"><a href="#">File</a>
+    	<ul>
+        	<li><a href="../index.html">Home</a></li>
+            <li><a onclick="exitProgram();" href="#">Exit</a></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a href="#">Sample Web Forms</a>
+        <ul>
+            <li><a href="write_screen_test.html">Write Screen Form</a></li>
+            <li><a href="send_key_test.html">Read Screen Form</a></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a href="#">Options</a>
+    	<ul>
+        	<li class="dropdown"><a href="#">Navigation</a>
+            	<ul>
+                	<li><a href="#">Navigation 1</a></li>
+            		<li><a href="#">Navigation 2</a></li>
+                    <li><a href="#">Navigation 3</a></li>
+                </ul>
+            </li>
+            <li><a href="case_navigation_test.html">Case Navigation</a></li>
+            <li><a href="test_page.html">Test Page</a></li>
+            <li><a onclick="testFunction();" href="#">Test Function</a></li>        
+        </ul>
+    </li>
+</ul>
+
+</div>
+
+<!-- Left Menu Bar -->
+<div id="left_nav">
+
+
+
+</div>
+
+
+<!-- Main Page Content -->
+<div id="main_content">
+
+<!-- InstanceBeginEditable name="Page Body" -->
+            
+<div id="content_wrapper">       
+            
+    <h1>Use the buttons below to navigate within a case:</h1>
+                
+    <br />
+    
+    <input style="width:150px;" type="button" id="submit_button" value="STAT/MEMB" onclick="navigate_to_screen('STAT','MEMB'); return false;" />
+    <br />
+    <br />
+    <input style="width:150px;" type="button" id="submit_button" value="CASE/CURR" onclick="navigate_to_screen('CASE,'CURR'); return false;" />
+    <br />
+    <br />
+    <input style="width:150px;" type="button" id="submit_button" value="CASE/NOTE" onclick="navigate_to_screen('CASE','NOTE'); return false;" />
+    <br />
+    <br />
+    <input style="width:150px;" type="button" id="submit_button" value="STAT/JOBS" onclick="navigate_to_screen('STAT','JOBS'); return false;" />
+    <br />
+    <br />
+    <input style="width:150px;" type="button" id="submit_button" value="ELIG/HC" onclick="navigate_to_screen('ELIG','HC'); return false;" />
+            
+</div>
+            
+            <!-- InstanceEndEditable -->
+
+<br />
+<br />
+</div>
+
+<!-- Bottom Status Bar -->
+<div id="status_bar">
+    <div id="bottom_clock"></div>
+    <div id="connection_status"></div>
+
+</div>
+
+</div>
+</body>
+<!-- InstanceEnd --></html>
