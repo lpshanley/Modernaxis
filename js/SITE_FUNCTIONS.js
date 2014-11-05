@@ -35,40 +35,6 @@ function pageLoad() {
   bzConnect();
 }
 
-//------------ Testing Area ------------------
-
-function alert_test() {
-	alert("WORKING!");	
-}
-
-
-          //------- Test Data---
-          
-var case_number = 211486;
-var footer_month = 10;
-var footer_year = 14;
-
-          //--------------------
-
-function testFunction() {
-  alert("Are you in training or production? Navigate to a panel in 211486(training case) this will bring you to STAT/MEMB.");
-  navigate_to_screen("STAT","MEMB");
-}
-
-function runme() {
-	var var_text = document.forms["testform"]["text_field"].value;
-	var row_text = document.forms["testform"]["row_field"].value;
-	var col_text = document.forms["testform"]["col_field"].value;
-	writeScreen(var_text,row_text,col_text);
-	return false;
-}
-
-function keysendtest() {
-  var X = document.forms["sendkeyform"]["key_field"].value;
-  host.sendKey(X);
-	return false;
-}
-
 //--------- Clock -----------------------------
 
 function startTime() {
@@ -90,7 +56,7 @@ function checkTime(i) {
 	return i;
 }
 
-//-------- Bluezone Connection -----------------
+//-------- BlueZone Connection -----------------
 
 function bzConnect(session_id) {
 	document.getElementById('connection_status').innerHTML = "Connecting...";
