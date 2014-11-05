@@ -1,6 +1,5 @@
 //------------------------------ JQuery Doc Ready Functions -----------------------
 
-<<<<<<< HEAD
 $(document).ready(function(){
 	
 	//----------- On Page Load ----------------------
@@ -30,7 +29,7 @@ $(document).ready(function(){
 });
 		
 //------------------------------ Normal Functions ----------------------------------
-=======
+
 function pageLoad() {
   startTime();
   bzConnect();
@@ -69,7 +68,6 @@ function keysendtest() {
   host.sendKey(X);
 	return false;
 }
->>>>>>> origin/alpha
 
 //--------- Clock -----------------------------
 
